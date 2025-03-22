@@ -1,0 +1,151 @@
+/* Updated Navbar Styles to match the second design */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tomato Logo Styling */
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: tomato;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Navbar Menu Items */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    color: #333;
+    font-size: 18px;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu li:hover {
+    color: tomato;
+}
+
+/* Navbar Right Section (Search & Cart) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border:1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.navbar button:hover{
+    background-color: #fff4f2;
+}
+
+.navbar-right img {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Active Page Indicator */
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar a {
+    font-family: 'Outfit', sans-serif;  /* Apply Outfit font */
+    font-size: 18px;  /* Adjust size if needed */
+    font-weight: 600; /* Make it bold */
+    color: #333; /* Set color */
+}
+
+.navbar-search-icon{
+    position:relative
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right:-8px;
+}
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+}
+
+@media (max-width: 900px) {
+    .navbar-logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+    }
+
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    
+}
